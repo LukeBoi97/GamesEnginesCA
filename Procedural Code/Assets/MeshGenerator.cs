@@ -12,7 +12,7 @@ public class MeshGenerator : MonoBehaviour
     int[] triangles;
 
     public int xSize = 20;
-    public int ySize = 20;
+    public int zSize = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +26,17 @@ public class MeshGenerator : MonoBehaviour
 
     void CreateShape()
     {
-        vertices = new Vector3[(xSize + 1) * (ySize + 1)];
+        vertices = new Vector3[(xSize + 1) * (zSize + 1)];
+
+        
+        for(int i = 0, z = 0; z <= zSize; z++)
+        {
+            for(int x = 0; x <= xSize; x++)
+            {
+                vertices[i] = new Vector3(x, 0, z);
+                i++;
+            }
+        }
 
     }
 
