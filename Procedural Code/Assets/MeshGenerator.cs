@@ -26,7 +26,7 @@ public class MeshGenerator : MonoBehaviour
 
     void CreateShape()
     {
-
+        vertices = new Vector3[(xSize + 1) * (ySize + 1)];
 
     }
 
