@@ -10,6 +10,7 @@ public class MeshGenerator : MonoBehaviour
 
     Vector3[] vertices;
     int[] triangles;
+    Vector2[] uvs;
 
     public int xSize = 20;
     public int zSize = 20;
@@ -67,6 +68,16 @@ public class MeshGenerator : MonoBehaviour
             vert++;
         }
 
+        uvs = new Vector2[vertices.Length];
+
+        for (int i = 0, z = 0; z <= zSize; z++)
+        {
+            for (int x = 0; x <= xSize; x++)
+            {
+                uvs[i] = new Vector2((float)x / xSize,(float) z / zSize);
+                i++;
+            }
+        }
 
     }
 
@@ -76,6 +87,7 @@ public class MeshGenerator : MonoBehaviour
 
         mesh.vertices = vertices;
         mesh.triangles = triangles;
+        mesh.uv = uvs;
 
         mesh.RecalculateNormals();
     }
