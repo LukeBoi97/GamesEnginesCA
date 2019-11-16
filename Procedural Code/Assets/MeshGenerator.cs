@@ -38,6 +38,11 @@ public class MeshGenerator : MonoBehaviour
             }
         }
 
+        triangles = new int[3];
+        triangles[0] = 0;
+        triangles[1] = xSize + 1;
+        triangles[2] = 1;
+
     }
 
     void UpdateMesh()
@@ -58,7 +63,7 @@ public class MeshGenerator : MonoBehaviour
             return;
         }
 
-        for(int i = 0; i < vertices.length; i++)
+        for(int i = 0; i < vertices.Length; i++)
         {
             Gizmos.DrawSphere(vertices[i], .1f);
         }
