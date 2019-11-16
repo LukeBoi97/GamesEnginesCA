@@ -50,5 +50,18 @@ public class MeshGenerator : MonoBehaviour
         mesh.RecalculateNormals();
     }
 
-    
+
+    private void OnDrawGizmos()
+    {
+        if(vertices == null)
+        {
+            return;
+        }
+
+        for(int i = 0; i < vertices.length; i++)
+        {
+            Gizmos.DrawSphere(vertices[i], .1f);
+        }
+    }
+
 }
