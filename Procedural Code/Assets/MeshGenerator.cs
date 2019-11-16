@@ -20,11 +20,16 @@ public class MeshGenerator : MonoBehaviour
         mesh = new Mesh();
         GetComponent<MeshFilter>().mesh = mesh;
 
-        CreateShape();
+        StartCoroutine(CreateShape());
+       
+    }
+
+    private void Update()
+    {
         UpdateMesh();
     }
 
-    void CreateShape()
+    IEnumerator CreateShape()
     {
         vertices = new Vector3[(xSize + 1) * (zSize + 1)];
 
@@ -42,18 +47,25 @@ public class MeshGenerator : MonoBehaviour
 
         int vert = 0;
         int tris = 0;
-        for(int x = 0; x < xSize; x++)
-        {
-            
-            triangles[tris + 0] = vert + 0;
-            triangles[tris + 1] = vert + xSize + 1;
-            triangles[tris + 2] = vert + 1;
-            triangles[tris + 3] = vert + 1;
-            triangles[tris + 4] = vert + xSize + 1;
-            triangles[tris + 5] = vert + xSize + 2;
 
+        for(int z = 0; z < zSize; z++)
+        {
+            for (int x = 0; x < xSize; x++)
+            {
+
+                triangles[tris + 0] = vert + 0;
+                triangles[tris + 1] = vert + xSize + 1;
+                triangles[tris + 2] = vert + 1;
+                triangles[tris + 3] = vert + 1;
+                triangles[tris + 4] = vert + xSize + 1;
+                triangles[tris + 5] = vert + xSize + 2;
+
+                vert++;
+                tris += 6;
+
+                yield return new WaitForSeconds(.1f);
+            }
             vert++;
-            tris += 6; 
         }
 
 
