@@ -1,13 +1,8 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Procedural Code/Assets/Scenes.meta
-guid: 3924f712727654a1383185035eb1f19c
-folderAsset: yes
-DefaultImporter:
-=======
 guid: a1dcf22807bc44b198990ff296b78245
 NativeFormatImporter:
->>>>>>> complete revamp of terrain:Procedural Code/Assets/MapMaterial.mat.meta
   externalObjects: {}
+  mainObjectFileID: 2100000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
