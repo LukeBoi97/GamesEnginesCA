@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -31,5 +32,10 @@ public static class TextureGenerator
             }
         }
         return TextureFromColourMap(colourMap, width, height);
+    }
+
+    internal static Texture2D TextureFromHeightMap(object p)
+    {
+        throw new NotImplementedException();
     }
 }
