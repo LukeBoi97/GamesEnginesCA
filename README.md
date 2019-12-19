@@ -16,4 +16,4 @@ https://www.youtube.com/user/Unity3D/playlists?view=50&sort=dd&shelf_id=27
 
 https://www.youtube.com/watch?v=wbpMiKiSKm8&list=PLFt_AvWsXl0eBW2EiBtl_sxmDtSgZBxB3
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JIzOX0aGz9s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
